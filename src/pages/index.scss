@@ -1,0 +1,17 @@
+@import '../sass/variables';
+
+// Content inside container
+.box {
+  text-align: center;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
+}
+
+// Circular images
+.img-circle {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

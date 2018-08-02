@@ -1,0 +1,119 @@
+@import '../sass/variables';
+
+// Site header
+.siteHeader {
+  min-height: 56px;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+#siteTitle {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+
+// Wrapper
+.wrapper {
+  position: relative;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  border-radius: $border-radius;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2 + 5;
+  }
+}
+
+.siteNav {
+  @include media-query($on-palm) {
+    // add background color on light mobile
+    background-color: $background-color;
+  }
+}
+
+.siteNav,
+.siteNavDark {
+  // top menu / mobile dropdown menu
+  float: right;
+  line-height: 56px;
+  z-index: 2;
+
+  .menuIcon {
+    display: none;
+  }
+
+  a {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: $spacing-unit / 2;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    .menuIcon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > img {
+        width: 18px;
+        height: 15px;
+
+        path {
+          fill: $grey-color-dark;
+        }
+      }
+    }
+
+    #menu {
+      clear: both;
+      display: none;
+      padding: 5px 10px;
+    }
+
+    &:hover #menu {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    a {
+      display: block;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}

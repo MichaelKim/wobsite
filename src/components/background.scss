@@ -1,0 +1,45 @@
+@import '../sass/variables';
+
+#full-page,
+#full-page-color {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#full-page {
+  background-image: $bg-image;
+}
+
+#full-page-color {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease-in-out;
+}
+
+#full-page,
+#full-page-color {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#full-page {
+  background-image: $bg-image;
+}
+
+#full-page-color {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease-in-out;
+}

@@ -1,0 +1,46 @@
+// Media query
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Variables
+$base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit: 30px;
+
+$text-color: #111;
+$background-color: #eaeaea;
+$brand-color: #2a7ae2;
+
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+// Width of the content area
+$content-width: 1000px;
+
+$on-palm: 800px; // <800: full width projects
+$on-laptop: 900px; // <900: font size changes
+$single-col: 1000px; // <1000: one column projects
+
+$bg-image: url(../../static/images/bg.png);
+$bg-image-dark: url(../../static/images/bg-dark.png);
+
+$border-radius: 6px;
+
+$button-color: #337ab7;
