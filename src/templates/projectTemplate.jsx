@@ -4,7 +4,7 @@ import PageLayout from '../layouts/page';
 
 export default function projectTemplate({ pathContext }) {
   const { html, title, github, link } = pathContext;
-  const [ghUser, ghRepo] = github.split('/');
+  const [ghUser, ghRepo] = (github || '').split('/');
   return (
     <article id="post" className="post">
       <div id="content" className="post-content">
