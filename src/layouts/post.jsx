@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import DefaultLayout from './default';
-
 const PostLayout = ({ title, date, children }) => (
   <div id="content" className="post-content">
     <header className="post-header">
