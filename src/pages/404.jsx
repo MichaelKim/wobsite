@@ -1,10 +1,11 @@
 import React from 'react';
 
+import PageLayout from '../layouts/page';
+
 const NotFoundPage = () => (
-  <div>
-    <h1>404 - Page Not Found</h1>
+  <PageLayout title="404 - Page Not Found">
     <p>Sorry, but the requested page is not found.</p>
-  </div>
+  </PageLayout>
 );
 
 export default NotFoundPage;
