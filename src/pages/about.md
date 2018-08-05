@@ -1,9 +1,12 @@
 ---
-path: "/my-first-page"
 layout: "page"
-date: "2017-11-07"
-title: "My first blog post"
+title: "About"
+path: "/about"
 ---
+
+<img src="https://avatars1.githubusercontent.com/u/8509052" alt="author photo" class="img-circle" style="width: 200px" />
+
+#### **I'm Michael Kim, a Computer Science student currently at the University of Waterloo.**
 
 I'm an aspiring software developer who listens to music all day. Wherever I am, I strive to learn more about the world I live in and apply that knowledge to make something new.
 

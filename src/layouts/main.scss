@@ -34,6 +34,13 @@ Page container
   opacity: 1;
 }
 
+// Content inside container
+.box {
+  text-align: center;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
+}
+
 // Animate fade in & out
 .fade-in {
   animation: fadein 1s;
@@ -59,4 +66,91 @@ Page container
   100% {
     opacity: 0;
   }
+}
+
+/**
+* Posts
+*/
+
+.post-content {
+  //margin-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 32px;
+
+    @include media-query($on-laptop) {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 26px;
+
+    @include media-query($on-laptop) {
+      font-size: 22px;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+
+    @include media-query($on-laptop) {
+      font-size: 18px;
+    }
+  }
+}
+
+.post-header {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: $spacing-unit / 2;
+  }
+}
+
+.post-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+/* Blog List */
+
+.blog-link:hover,
+.blog-link:active,
+.blog-link:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+.blog-box {
+  color: black;
+  border-top: 2px solid $grey-color-light;
+  margin-bottom: 5px;
+
+  p {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include media-query($on-palm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.blog-box:hover {
+  color: #4338dc;
 }

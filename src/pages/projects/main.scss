@@ -1,0 +1,104 @@
+@import '../../sass/variables';
+
+/*
+Project page
+*/
+// Container for all projects in projects page
+.project-list {
+  display: inline-block;
+  width: 90%;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+  // Individual project
+  .project {
+    border-radius: $border-radius;
+    /* padding-bottom: $spacing-unit / 3; */
+    margin: 0 auto $spacing-unit/3 auto;
+    background-color: #fafafa;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+
+    width: 400px;
+    height: 225px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Content inside project on hover
+    .project-box {
+      padding: 10px;
+      background-color: #fafafa;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      border-radius: $border-radius;
+
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    // Full width projects
+    @include media-query($on-palm) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // Show content on hover
+  .project:hover .project-box {
+    opacity: 1;
+  }
+  // Alternate left/right align for two columns
+  .project-link {
+    &:nth-child(odd) {
+      float: left;
+    }
+    &:nth-child(even) {
+      float: right;
+    }
+    // One column projects
+    @include media-query($single-col) {
+      float: left !important;
+      width: 100%;
+    }
+    // Full width projects
+    @include media-query($on-palm) {
+      padding-bottom: 56.25%; // 16:9 aspect ratio
+      position: relative;
+      margin-bottom: $spacing-unit/3;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+  a:visited {
+    color: #2a7ae2;
+  }
+}
+
+/*
+ * Project Tools list in projects page
+*/
+.tools {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #4338dc;
+  padding: 2px 4px;
+  margin-right: 6px;
+  margin-bottom: 2px;
+  cursor: pointer;
+
+  a {
+    color: black;
+    display: inline-block;
+  }
+}
+
+.tools:hover {
+  box-shadow: inset 0 0 5px rgba(40, 40, 40, 0.3);
+}
