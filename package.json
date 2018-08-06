@@ -8,7 +8,9 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "license": "MIT",
   "scripts": {

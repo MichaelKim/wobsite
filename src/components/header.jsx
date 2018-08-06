@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import MenuIcon from './icon-menu.svg';
-import GithubIcon from './icon-github.svg';
-import LinkedinIcon from './icon-linkedin.svg';
+import MenuIcon from './icon-menu';
+import GithubIcon from './icon-github';
+import LinkedinIcon from './icon-linkedin';
 
 import './header.scss';
 
@@ -16,7 +16,7 @@ const Header = () => (
 
       <nav className="site-nav">
         <a className="menu-icon">
-          <img src={MenuIcon} />
+          <MenuIcon />
         </a>
         <div id="menu">
           <Link to="/about/" className="fade-link">
@@ -34,14 +34,10 @@ const Header = () => (
           </Link>
 
           <a href="https://github.com/LenKagamine" style={{ textDecoration: 'none' }}>
-            <span className="icon">
-              <img src={GithubIcon} />
-            </span>
+            <GithubIcon />
           </a>
           <a href="https://ca.linkedin.com/in/michaelkim314" style={{ textDecoration: 'none' }}>
-            <span className="icon">
-              <img src={LinkedinIcon} />
-            </span>
+            <LinkedinIcon />
           </a>
         </div>
       </nav>

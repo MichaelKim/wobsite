@@ -1,0 +1,76 @@
+@import '../sass/variables';
+
+// Lightbulb positioning
+@keyframes light-pull-on {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes light-pull-off {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+@keyframes light-wiggle {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: -40px;
+  }
+  100% {
+    top: -60px;
+  }
+}
+
+.lightbulb {
+  position: absolute;
+  z-index: 5;
+  top: -50px;
+  left: 85px;
+  padding-left: 15px;
+  animation: light-wiggle 0.5s linear 0.5s 2 alternate;
+
+  .chain {
+    height: 200px;
+    border-left: 2px dotted black;
+  }
+
+  .handle {
+    position: relative;
+    background-color: #555;
+    width: 15px;
+    height: 15px;
+    border: 1px #888 solid;
+    border-radius: 50%;
+    left: -7px;
+  }
+
+  @include media-query($on-palm) {
+    left: 0;
+  }
+}
+
+.light-on {
+  top: -50px;
+  animation: light-pull-on 0.75s;
+}
+
+.light-off {
+  top: -100px;
+  animation: light-pull-off 0.75s;
+}
