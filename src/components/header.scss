@@ -43,28 +43,31 @@
 }
 
 .site-nav {
-  @include media-query($on-palm) {
-    // add background color on light mobile
-    background-color: $background-color;
-  }
-}
-
-.site-nav {
   // top menu / mobile dropdown menu
   float: right;
   line-height: 56px;
   z-index: 2;
+
+  @include media-query($on-palm) {
+    // add background color on light mobile
+    background-color: $background-color;
+  }
 
   .menu-icon {
     display: none;
   }
 
   a {
-    color: $text-color;
+    // color: $text-color;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
+      // Hack: for some reason the styles aren't being inserted
+      // in the correct order, so these links have the default blue color
+      // when visited. While the above rule is applied before the default,
+      // this rule is applied after it, so this will overwrite correctly.
+      color: $text-color;
       margin-right: 20px;
     }
   }

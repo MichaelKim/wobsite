@@ -5,6 +5,7 @@ description: New tab terminal experience
 tools: React, Redux, Node.js, webpack, Chrome
 github: wheel-org/mercurywm
 date: 2017-07-25
+slider: ["Layout with clock, weather, and todo scripts", "Complex window layout with image script"]
 ---
 
 ### About
@@ -25,8 +26,3 @@ Initially, MercuryWM was created under the name WatTerm, and was developed mostl
 Once the React-Redux fork caught up to the jQuery one, it became the official version and was renamed to MercuryWM. After that, we focused on making MercuryWM more extensible, specifically through the use of scripts and modules. This allows for new features to be added to MercuryWM without actually modifying its source (and requiring an update for all users). In addition, users can use the Mercury Module Manager to install custom commands. And since `mmm` itself is a module, it can easily update itself.
 
 Overall, we wanted MercuryWM to mimic the workstyle of regular terminals, where users can write their own bash scripts or `apt-get` any package they needed.
-
-{% include imagebox.html name="mercurywm" titles="
-	Layout with clock, weather, and todo scripts
-	Complex window layout with image script
-" %}

@@ -28,6 +28,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               github
               link
+              slider
             }
           }
         }
@@ -57,7 +58,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html: node.html,
             title: node.frontmatter.title,
             github: node.frontmatter.github,
-            link: node.frontmatter.link
+            link: node.frontmatter.link,
+            slider: node.frontmatter.slider
           }
         });
       } else {

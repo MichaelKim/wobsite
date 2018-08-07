@@ -241,3 +241,25 @@ body.dark {
     fill: #fff;
   }
 }
+
+/* Lightbox */
+
+.imagebox {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    margin-right: 5px;
+
+    img {
+      width: 24%;
+      border-radius: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      @include media-query($on-palm) {
+        width: 100%;
+      }
+    }
+  }
+}

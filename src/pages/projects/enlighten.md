@@ -6,6 +6,7 @@ tools: JavaScript, Node.js, Socket.io, HTML, CSS
 github: Enlighten
 link: enlighten.michaelkim.me
 date: 2015-08-30
+slider: ["First level", "Gameplay with two players"]
 ---
 
 ### About
@@ -27,8 +28,3 @@ To make building and editing levels easier, I made a level editor that can impor
 - Once reaching the end of a level, the player will be teleported to the start of the next level.
 
 Note: currently, there are five levels available. Finishing the last level will send the player back to the start of the last level.
-
-{% include imagebox.html name="enlighten" titles="
-	First level
-	Gameplay with two players
-" %}

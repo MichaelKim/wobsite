@@ -5,6 +5,7 @@ description: Console Rhythm Game
 tools: C++
 github: Tap-Tap-Revolution
 date: 2015-06-19
+slider: ["Start menu", "Gameplay"]
 ---
 
 ### About
@@ -29,8 +30,3 @@ I also had a separate program that would generate a song data file. However, bot
 I chose to avoid using any external libraries or Windows API for graphics simply convenience (although manipulating the console window was in itself a challenge).
 
 Initially, the entire screen was refreshed when drawing each frame of the game. However, clearing and redrawing caused the window to constantly flicker. I fixed this by only redrawing portions of the screen that needed to be changed, such as moving the notes down or changing the score, and leaving the static portions untouched. This vastly improved the visibility of the game as most of the flickering disappeared. It still slightly suffers from the same problem, most visible on the notes, but is not very disruptive to the gameplay.
-
-{% include imagebox.html name="tap-tap-revolution" titles="
-	Start menu
-	Gameplay
-" %}

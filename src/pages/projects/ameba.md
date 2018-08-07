@@ -5,6 +5,7 @@ description: Interactive life simulation game
 tools: Java
 github: aMEba
 date: 2015-01-22
+slider: ['Survival gameplay', 'God Mode gameplay', 'Start menu']
 ---
 
 ### About
@@ -25,9 +26,3 @@ There are two game modes:
 I had a lot of fun testing the enemies' behaviours as they try to survive. Currently, an enemy will wander randomly around until a berry or an organism of a different species than itself (which includes the player) enters its field of view (a small triangle located in front of it), which it will then chase. Even with this simple mind, a swarm of organisms can produce interesting behaviour such as a "conga line" of organisms, all chasing the one in front of them.
 
 A factor that changes the swarm as a whole is their base stats and how they get passed along by consumption. Each organism including the player starts off with a randomized set of stats, such as max health, attack, and speed, which is stored in a DNA object. Whenever an organism eats (deals the killing attack) another organism, some of the victim's DNA stats are added to the killer's DNA and progressing further into the game. An alternative way to survive is to simply eat the berries, but as others continue to advance and improve, it becomes harder to avoid their attacks. In the end, it becomes harder and harder to satisfy your hunger, so all organisms will eventually die.
-
-{% include imagebox.html name="ameba" titles="
-	Survival gameplay
-	God Mode gameplay
-	Start menu
-" %}

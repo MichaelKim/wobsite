@@ -5,6 +5,7 @@ description: High School Newspaper App
 tools: Android, Java
 link: play.google.com/store/apps/details?id=ca.thereckoner.thereckoner
 date: 2015-08-09
+slider: ["First testing build grabs articles by id", "Displays latest articles with images", "Final styling and layout", "Reading an article"]
 ---
 
 ### About
@@ -24,10 +25,3 @@ For the first week, we introduced ourselves to Android Studio and picked librari
 Looking back, the app helped a lot of people in different ways. The release of the app on Google Play greatly expanded our outreach in the local community. Many students have expressed positive feedback over the convenience that the app provides. However, not only was The Reckoner impacted by the app, but we ourselves were as well. The creation of the app helped us understand the production process of a collaborative project, something independent of our school studies.
 
 Even though I've passed the torch to a new Web Manager, this project is far from over. The app, currently in its second version, receives ongoing support from the current Web Development board with additional features being implemented on a rolling basis. There are also future plans for an iOS release, so stay tuned!
-
-{% include imagebox.html name="the-reckoner-app" titles="
-	First testing build grabs articles by id
-	Displays latest articles with images
-	Final styling and layout
-	Reading an article
-" %}
