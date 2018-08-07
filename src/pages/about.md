@@ -1,7 +1,7 @@
 ---
-layout: "page"
-title: "About"
-path: "/about"
+layout: page
+title: About
+path: /about
 ---
 
 <img src="https://avatars1.githubusercontent.com/u/8509052" alt="author photo" class="img-circle" style="width: 200px" />

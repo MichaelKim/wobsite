@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import { connect } from 'react-redux';
 
+import HomeLayout from '../components/layouts/home';
+
 import './index.scss';
 
 class IndexPage extends React.Component {
@@ -27,49 +29,51 @@ class IndexPage extends React.Component {
     }
 
     return (
-      <div className="box">
-        <img
-          src="https://avatars1.githubusercontent.com/u/8509052"
-          alt="author photo"
-          className="img-circle"
-          width="150"
-          height="150"
-        />
-        <h1>
-          <span className="no-wrap">Hello, I'm</span>{' '}
-          <span className="no-wrap">
-            <b>Michael Kim</b>!
-          </span>
-        </h1>
-        <h3
-          style={{
-            transition: 'opacity 0.37s',
-            opacity: bios[chain] === bios[prev] ? 1 : 0
-          }}
-        >
-          {bios[prev]}
-        </h3>
+      <HomeLayout title="">
+        <div className="box">
+          <img
+            src="https://avatars1.githubusercontent.com/u/8509052"
+            alt="author photo"
+            className="img-circle"
+            width="150"
+            height="150"
+          />
+          <h1>
+            <span className="no-wrap">Hello, I'm</span>{' '}
+            <span className="no-wrap">
+              <b>Michael Kim</b>!
+            </span>
+          </h1>
+          <h3
+            style={{
+              transition: 'opacity 0.37s',
+              opacity: bios[chain] === bios[prev] ? 1 : 0
+            }}
+          >
+            {bios[prev]}
+          </h3>
 
-        <hr className="hline" />
+          <hr className="hline" />
 
-        <Link to="/about/" className="btn">
-          about
-        </Link>
-        <Link to="/projects/" className="btn">
-          projects
-        </Link>
-        <Link to="/blog/" className="btn">
-          blog
-        </Link>
-        <a href="https://github.com/LenKagamine/" className="btn">
-          github
-        </a>
-        <a href="/Michael-Kim-Resume.pdf" className="btn">
-          resume
-        </a>
+          <Link to="/about/" className="btn">
+            about
+          </Link>
+          <Link to="/projects/" className="btn">
+            projects
+          </Link>
+          <Link to="/blog/" className="btn">
+            blog
+          </Link>
+          <a href="https://github.com/LenKagamine/" className="btn">
+            github
+          </a>
+          <a href="/Michael-Kim-Resume.pdf" className="btn">
+            resume
+          </a>
 
-        <hr className="hline" />
-      </div>
+          <hr className="hline" />
+        </div>
+      </HomeLayout>
     );
   }
 }

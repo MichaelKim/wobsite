@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PostLayout from '../layouts/post';
+import PostLayout from '../components/layouts/post';
 
 export default function postTemplate({ pathContext }) {
   const { date, title, html } = pathContext;

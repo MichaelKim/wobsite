@@ -3,7 +3,7 @@ import React from 'react';
 import GithubIcon from '../components/icon-github';
 import LinkedinIcon from '../components/icon-linkedin';
 
-import PageLayout from '../layouts/page';
+import PageLayout from '../components/layouts/page';
 
 const ContactPage = () => (
   <PageLayout title="Contact">

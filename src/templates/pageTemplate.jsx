@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PageLayout from '../layouts/page';
+import PageLayout from '../components/layouts/page';
 
 export default function pageTemplate({ pathContext }) {
   const { html, title } = pathContext;

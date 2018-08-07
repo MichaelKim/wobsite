@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Head from '../components/head';
-import Background from '../components/background';
-import Lightbulb from '../components/lightbulb';
+import Head from '../head';
+import Background from '../background';
+import Lightbulb from '../lightbulb';
+
+import './main.scss';
 
 const HomeLayout = ({ title, children }) => (
   <div>

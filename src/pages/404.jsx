@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PageLayout from '../layouts/page';
+import PageLayout from '../components/layouts/page';
 
 const NotFoundPage = () => (
   <PageLayout title="404 - Page Not Found">
