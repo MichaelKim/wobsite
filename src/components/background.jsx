@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Lightbulb from './lightbulb';
-
 import './background.scss';
 
 const Background = ({ chain }) => {
@@ -20,7 +18,6 @@ const Background = ({ chain }) => {
     <div>
       <div id="full-page" />
       <div id="full-page-color" style={{ backgroundColor: bgColor }} />
-      <Lightbulb />
     </div>
   );
 };
