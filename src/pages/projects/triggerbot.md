@@ -2,7 +2,7 @@
 layout: project
 title: TriggerBot
 description: Communicating bot with an attitude
-tools: Node.js, Voice Recognition, Sentiment Analysis, JavaScript, HTML, CSS
+tools: Node.js, Voice Recognition, Sentiment Analysis, JavaScript
 github: yanske1/TriggerBot
 link: triggerbot.herokuapp.com
 date: 2017-01-28
@@ -19,6 +19,7 @@ TriggerBot relies on several tools that were provided at McHacks for a limited-t
 ### Dependencies
 
 TriggerBot uses several APIs, each working on one distinct component:
+
 - IBM Watson Analytics: Speech to Text service uses speech recognition capabilities to convert speech from the user into text for TriggerBot
 - Lexalytics' Semantria: Sentiment analysis to detect mood from the user's message, and also TriggerBot's response
 - Cleverbot API: Produces realistic replies to user messages to maintain a conversation

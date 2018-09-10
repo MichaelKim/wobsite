@@ -1,29 +1,25 @@
 ---
 layout: project
-title: Hestia
-description: Web service for making web apps
-tools: Node.js, Socket.io, JavaScript, HTML, CSS
+title: hestia.io
+description: Node framework for making web apps
+tools: Node.js, Socket.io, JavaScript, Flow, npm, Jest
 github: Hestia
-link: hestiaroom.herokuapp.com
+link: https://www.npmjs.com/package/hestia.io
 date: 2017-02-05
 ---
 
 ### About
 
-Hestia is a web app that allows developers to quickly setup multi-user and real-time web apps.
+Hestia.io is a Node.js web app framework that manages instances of multi-user real-time apps. It is currently available as a npm package.
 
-Hestia is centered around the idea of "rooms": groups of users that together interact with a web app simultaneously. These apps can be anything from multiplayer games, voice/video/text chat systems, drawing tools, text editors, or educational quizzes. By providing all the basic networking functionalities, developers only need to write app-specific code when using Hestia.
+It achieves this by introducing rooms to Socket.io and handling app instances for each room. (Sidenote: while Socket.io does have room capabilities, the original Hestia was built before they were introduced). These rooms are composed of groups of users that together interact with a web app simultaneously.
 
-To start, a host creates a room, which has a randomly generated id assigned to it. Then, other users can join the room using that id. Any app that the host chooses within the room will be shown to everyone else in the room. Right now, there are four sample apps already written (available in `/apps`) that can be opened to demonstrate what Hestia can do.
-
-I made this as my submission for QHacks 2017.
+Hestia.io has gone under a lot of changes since its creation at QHacks 2017. Since then, it has evolved into an entirely different project. You can read about the original development on [my Devpost submission](https://devpost.com/software/hestia).
 
 ### Development
 
-Besides Node and a few basic frameworks (Express.js, Socket.io), Hestia is built using only vanilla JavaScript.
+The concept for Hestia began as a web app that hosted multi-user real-time apps created by other developers. As rooms didn't exist natively in Socket.io, Hestia managed rooms, their group of users, and their app instances. In order to sandbox app instances from Hestia and other apps, I used Shadow DOM to run these instances. While it wasn't the best of solutions, it did its job well enough to be presented as a demo. You can check out my sleep deprived code in all its glory [here](https://github.com/LenKagamine/Hestia/tree/3b2357e55e41050657606784ff83c88260f7f3d9).
 
-I came up with a multiplayer game system a long time before this hackathon after I was inspired by numerous web services that allow a similar functionality (group of users entering some key to join a lobby). At first, I wanted to build this "login" system to access a bunch of games, where friends could choose a game to play together. After pondering about it, I realized this could be extended to any multi-user web app instead of just games. And thus, Hestia was born.
+Months after the hackathon, I revisited Hestia and made a few changes. The most significant change was the way how Hestia ran its app instances. I moved all of the app logic to a separate server and had Hestia run apps by rendering an iframe pointed to the new app server. In hindsight, I'm not sure why I came to this decision and shortly after, I combined the two servers, keeping the iframes.
 
-I had a lot of fun finding a secure way to find external JS, and also allowing other code to call built-in functions in Hestia (i.e. sending/receiving messages between client/server). Initially, Hestia injects the custom code (HTML/CSS + JS) into Shadow DOM, and executes the code inside of it. This provides some security against malicious code as it separates Hestia and the custom code. However, I've switched to using iframes and loading the app from a separate server as it gives more flexibility for apps.
-
-In the future, I hope to expand this into a fully fledged web service, allowing others to submit their web apps and have them hosted along with other apps.
+However, Hestia was still limited by its web app design. For someone to create an app with Hestia, they would have to either make a pull request on my repo or fork it and host Hestia themselves. This felt very restrictive as I wanted to make Hestia more accessible for anyone to use. So, I separated all the parts of Hestia that was implementation agnostic and packaged it into an npm package. It now lives under its new name as hestia.io.

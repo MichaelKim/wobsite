@@ -2,7 +2,7 @@
 layout: project
 title: xkcd explainer
 description: Chrome extension with Wikitext parser
-tools: JavaScript, CSS, Chrome
+tools: JavaScript, Chrome
 github: xkcd-explainer
 link: chrome.google.com/webstore/detail/xkcd-explainer/foejkfobkipagoaicljcokpdbdldfmdn
 date: 2016-07-27

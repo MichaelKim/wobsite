@@ -2,11 +2,11 @@
 layout: project
 title: lasopmorp
 description: Short web game
-tools: TypeScript, HTML, CSS
+tools: TypeScript, JavaScript
 github: lasopmorp
 link: michaelkim.me/lasopmorp
 date: 2016-05-18
-slider: ["First letter", Rewinding after all letters are finished", "Replaying after rewinding"]
+slider: ['First letter', Rewinding after all letters are finished", 'Replaying after rewinding']
 ---
 
 ### About

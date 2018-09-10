@@ -2,11 +2,11 @@
 layout: project
 title: Enlighten
 description: Collaborative multiplayer webgame
-tools: JavaScript, Node.js, Socket.io, HTML, CSS
+tools: Node.js, Socket.io, JavaScript
 github: Enlighten
 link: enlighten.michaelkim.me
 date: 2015-08-30
-slider: ["First level", "Gameplay with two players"]
+slider: ['First level', 'Gameplay with two players']
 ---
 
 ### About
