@@ -69,7 +69,7 @@ class ProjectsPage extends React.Component {
           <p />
           {filteredProjects.map(project => (
             <Link to={'/project/' + project.slug} className="fade-link project-link" key={project.title}>
-              <div className="project" style={{ backgroundImage: 'url(../images/' + project.slug + '.png)' }}>
+              <div className="project" style={{ backgroundImage: 'url(/images/' + project.slug + '.png)' }}>
                 <div className="project-box">
                   <h2>{project.title}</h2>
                   <h3>{project.description}</h3>

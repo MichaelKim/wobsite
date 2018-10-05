@@ -45,8 +45,8 @@ class ProjectLayout extends React.Component {
               {slider ? (
                 <div className={'imagebox slider-' + slug}>
                   {slider.map((caption, i) => (
-                    <a href={'../images/' + slug + '-' + i + '.png'} data-caption={caption} key={slug + '-' + i}>
-                      <img src={'../images/' + slug + '-' + i + '.png'} alt={caption} />
+                    <a href={'/images/' + slug + '-' + i + '.png'} data-caption={caption} key={slug + '-' + i}>
+                      <img src={'/images/' + slug + '-' + i + '.png'} alt={caption} />
                     </a>
                   ))}{' '}
                 </div>
