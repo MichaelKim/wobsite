@@ -20,15 +20,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
-            html
+            id
             frontmatter {
               layout
-              title
-              date(formatString: "MMMM DD, YYYY")
               path
-              github
-              link
-              slider
+              title
             }
           }
         }
@@ -45,9 +41,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path: '/blog' + node.frontmatter.path,
           component: postTemplate,
           context: {
-            html: node.html,
-            title: node.frontmatter.title,
-            date: node.frontmatter.date
+            id: node.id
           }
         });
       } else if (node.frontmatter.layout === 'project') {
@@ -55,11 +49,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path: '/project/' + slugify(node.frontmatter.title),
           component: projectTemplate,
           context: {
-            html: node.html,
-            title: node.frontmatter.title,
-            github: node.frontmatter.github,
-            link: node.frontmatter.link,
-            slider: node.frontmatter.slider
+            id: node.id
           }
         });
       } else {
@@ -67,8 +57,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path: node.frontmatter.path,
           component: pageTemplate,
           context: {
-            html: node.html,
-            title: node.frontmatter.title
+            id: node.id
           }
         });
       }

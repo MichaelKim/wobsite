@@ -2,8 +2,10 @@ import React from 'react';
 
 import ProjectLayout from '../components/layouts/project';
 
-export default function projectTemplate({ pathContext }) {
-  const { html, title, github, link, slider } = pathContext;
+export default function projectTemplate(props) {
+  const { markdownRemark } = props.data;
+  const { html } = markdownRemark;
+  const { title, github, link, slider } = markdownRemark.frontmatter;
   const [ghUser, ghRepo] = (github || '').split('/');
   return (
     <ProjectLayout title={title} link={link} slider={slider} ghUser={ghUser} ghRepo={ghRepo}>
@@ -11,3 +13,17 @@ export default function projectTemplate({ pathContext }) {
     </ProjectLayout>
   );
 }
+
+export const projectQuery = graphql`
+  query ProjectQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        github
+        link
+        slider
+      }
+    }
+  }
+`;

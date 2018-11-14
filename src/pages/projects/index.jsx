@@ -87,7 +87,7 @@ class ProjectsPage extends React.Component {
 export default ProjectsPage;
 
 export const pageQuery = graphql`
-  query ProjectQuery {
+  query ProjectsQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
