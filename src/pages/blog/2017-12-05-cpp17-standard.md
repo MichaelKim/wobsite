@@ -117,7 +117,7 @@ if (a = 5, a < 6) {
 
 ### Structured Bindings
 
-I thought this was an interesting addition since it bears resemblance to a ES6 feature: destructing assignment.
+I thought this was an interesting addition since it bears resemblance to something more familiar to me: ES6's destructing assignment.
 
 To unpack the values of a `std::tuple`, each variable needed to be declared separately,
 

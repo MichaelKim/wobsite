@@ -13,11 +13,13 @@ A week ago, I found a League of Legends app that allows a player to check all th
 When I looked through the source to see how it was grabbing the relevant info, I found [three endpoints that the app seemed to call](https://github.com/LeagueDevelopers/lol-skins-viewer/blob/master/app/api/SkinsController.js#L37). However, there were a few problems:
 
 - These endpoints aren't documented in Riot Games' API docs. They don't even match the format of Riot's APIs.
-- There's no API key for Riot's API, nor does the app connect to an external server.
+- There's no API key for Riot's API, nor does the app connect to an external server. It even fetches from localhost.
 
 So, it must be getting the player data without Riot's official API.
 
-Also, the endpoints were calling localhost on some variable port. This should mean the app is running a server on localhost to run some code. But then why would the app make a HTTP request to its own server? And why does the app need LoL to be open to work?
+Also, the endpoints were calling localhost on some variable port. This should mean the app is relying on some locally hosted server for data. Did the app start the server? Then why would the app make a HTTP request to its own server? If the app didn't start it, then what did? And why does the app need LoL to be open to work?
+
+### Digging Deeper
 
 All of these requests are performed with a given port and password. These values are retrieved from the app's Redux store which has an initial empty state, so it must be set sometime later. The port and password are located at `state.app.lcu`, and a look at the app's reducers show only one action type changes that value: `LCU_UP`. That action type is used by the `up` action creator, which in turn is called in a function called `onLockFile`.
 
@@ -31,7 +33,7 @@ In League of Legends, a file called `lockfile` is created whenever LoL is opened
 
 The [app parses](https://github.com/LeagueDevelopers/lol-skins-viewer/blob/master/app/utils/parseLockfile.js) it as:
 
-    Process name : Process ID : Port : Password : https
+    Process name : Process ID : Port : Password : "https"
 
 So on startup, LoL picks out some port and a password before loading everything up. A quick ping onto the port shows it is being used while LoL is open.
 
@@ -64,6 +66,8 @@ And it works!
 It seems like all it checks for is Basic Auth with username `riot` and a random password.
 
 But why does LoL have this open?
+
+### Chromium Embedded Framework
 
 On May 2016, Riot Games published [a blog post on their engineering blog](https://engineering.riotgames.com/news/architecture-league-client-update) outlining going over the design decisions for the LCU. One big change that they made was a shift towards JavaScript. They had initially planned to rewrite the client as a browser and use HTML + JavaScript to provide the UI. At first I thought they would use Electron, but instead they used some tool called the [Chromium Embedded Framework](https://bitbucket.org/chromiumembedded/cef).
 

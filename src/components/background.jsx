@@ -4,15 +4,15 @@ import { connect } from 'react-redux';
 
 import './background.scss';
 
+const colors = [
+  'rgba(0, 0, 0, 0)',
+  'rgba(79, 0, 99, 0.7)', // purple
+  'rgba(8, 56, 161, 0.7)', // blue
+  'rgba(0, 0, 0, 0.7)' // dark
+];
+
 const Background = ({ chain }) => {
-  let bgColor = 'rgba(0, 0, 0, 0)';
-  if (chain === 1) {
-    bgColor = 'rgba(79, 0, 99, 0.7)'; // purple
-  } else if (chain === 2) {
-    bgColor = 'rgba(8, 56, 161, 0.7)'; // blue
-  } else if (chain === 3) {
-    bgColor = 'rgba(0, 0, 0, 0.7)'; // dark
-  }
+  const bgColor = colors[chain] || colors[0];
 
   return (
     <div>
@@ -28,7 +28,4 @@ Background.propTypes = {
   chain: PropTypes.number
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(Background);
+export default connect(mapStateToProps)(Background);

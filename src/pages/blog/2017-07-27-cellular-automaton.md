@@ -11,6 +11,10 @@ A few weeks ago, a friend of mine sent me a link, telling me it's a series of pr
 
 That website was Foobar, a hidden recruiting website by Google. I received a referral link from that friend who also attempted the challenge (who was also referred by a friend).
 
+<div class="imagebox">
+    <img src="/images/foobar.png" style="width: 50%;">
+</div>
+
 The challenge consists of five levels of programming questions in increasing difficulty. Unlike other online judges, the interface has no buttons to click. Instead, it's centered around a virtual terminal with several common shell commands (e.g. `ls`, `cat`, `cd`, etc.). While neither `vi` nor `emacs` are available, `edit` opens a small editor which shares the screen with the terminal.
 
 I was going to write this post about all the questions I've solved, but I found the last one particularly interesting and felt it deserved a whole post.
@@ -81,7 +85,7 @@ For non-reversible cellular automata, there exists some state that has no predec
 
 ### Solution
 
-A brute-force solution (i.e. simply generating all m+1 x n+1 grids and checking their next step) will be O(m _ n _ 2^(m\*n)) and definitely take too long, so I started with a better approach.
+A brute-force solution (i.e. simply generating all m+1 x n+1 grids and checking their next step) will be O(m \* n \* 2^(m\*n)) and definitely take too long, so I started with a better approach.
 
 Rather than testing all possible grids, it would be faster to generate predecessors cell by cell. This only goes through actual predecessors and skips those that aren't. One other choice I made was to split the grid into columns, and try to break into subproblems.
 
@@ -89,7 +93,7 @@ The grid is first split into columns, basically turning the grid into multiple 1
 
 If any of these columns don't have any predecessors, then the whole grid also doesn't have any predecessors, or is a Garden of Eden.
 
-Now we have a list of predecessors for each column in the grid. To build the whole grid, we need to chain these column predecessors. Since a column predecessor has two columns, the second column will overlap with the predecessor of the next column. A valid predecessor for the entire grid will consists of multiple column predecessors that each share one column (the overlap). If there are two columns without any overlapping column predecessors, then the grid is again a Garden of Eden. A naive brute-force will take O(m _ n _ p^2), where p is the average number of column predecessors per column. Note that p can be very big, up to 2^n as shown above, so this step takes considerably long time.
+Now we have a list of predecessors for each column in the grid. To build the whole grid, we need to chain these column predecessors. Since a column predecessor has two columns, the second column will overlap with the predecessor of the next column. A valid predecessor for the entire grid will consists of multiple column predecessors that each share one column (the overlap). If there are two columns without any overlapping column predecessors, then the grid is again a Garden of Eden. A naive brute-force will take O(m \* n \* p^2), where p is the average number of column predecessors per column. Note that p can be very big, up to 2^n as shown above, so this step takes considerably long time.
 
 One key part of the problem is that the constraints of the grid are very skewed: a max width of 50 but only a max height of 10. Even with an exponential solution, it may be fast enough if it's only exponential of the height of the grid (2^10 = 1024; 2^50 = 1024^5).
 

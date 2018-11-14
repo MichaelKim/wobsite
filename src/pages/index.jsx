@@ -7,26 +7,31 @@ import HomeLayout from '../components/layouts/home';
 
 import './index.scss';
 
+const bios = [
+  'Student, Programmer, Gamer',
+  "Yahoo Intern: May - Aug '17",
+  "Facebook Intern: Jan - Apr '18",
+  'Student, Programmer, Gamer'
+];
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { prev: this.props.chain };
   }
 
-  render() {
+  componentDidUpdate() {
     const { chain } = this.props;
     const { prev } = this.state;
-
-    const bios = [
-      'Student, Programmer, Gamer',
-      "Yahoo Intern: May - Aug '17",
-      "Facebook Intern: Jan - Apr '18",
-      'Student, Programmer, Gamer'
-    ];
 
     if (bios[prev] !== bios[chain]) {
       setTimeout(() => this.setState({ prev: chain }), 370);
     }
+  }
+
+  render() {
+    const { chain } = this.props;
+    const { prev } = this.state;
 
     return (
       <HomeLayout title="">
@@ -84,7 +89,4 @@ IndexPage.propTypes = {
   chain: PropTypes.number
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(IndexPage);
+export default connect(mapStateToProps)(IndexPage);
