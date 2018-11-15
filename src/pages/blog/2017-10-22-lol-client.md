@@ -40,8 +40,7 @@ So on startup, LoL picks out some port and a password before loading everything 
 <div class="imagebox">
 	<a
 		href="/images/blog1.png"
-		data-lightbox="league-blog"
-		data-title="Pinging the mysterious port"
+		data-caption="Pinging the mysterious port"
 	>
 		<img src="/images/blog1.png" style="width: 50%;">
 	</a>
@@ -56,8 +55,7 @@ And it works!
 <div class="imagebox">
 	<a
 		href="/images/blog2.png"
-		data-lightbox="league-blog"
-		data-title="Making a request to the secret endpoint"
+		data-caption="Making a request to the secret endpoint"
 	>
 		<img src="/images/blog2.png" style="width: 50%;">
 	</a>

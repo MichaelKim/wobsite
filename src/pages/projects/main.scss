@@ -19,6 +19,7 @@ Project page
   }
   // Individual project
   .project {
+    position: relative;
     border-radius: $border-radius;
     /* padding-bottom: $spacing-unit / 3; */
     margin: 0 auto $spacing-unit/3 auto;
@@ -31,6 +32,13 @@ Project page
     display: flex;
     justify-content: center;
     align-items: center;
+    // Image of project
+    .project-image {
+      left: 0;
+      top: 0;
+      z-index: 1;
+      border-radius: 6px;
+    }
     // Content inside project on hover
     .project-box {
       padding: 10px;
@@ -40,6 +48,7 @@ Project page
 
       opacity: 0;
       transition: opacity 0.2s ease-in-out;
+      z-index: 2;
     }
     // Full width projects
     @include media-query($on-palm) {

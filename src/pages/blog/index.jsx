@@ -10,30 +10,30 @@ const BlogPage = ({
 }) => (
   <PageLayout title="Blog">
     <div className="blog-list">
-      {edges
-        .filter(({ node }) => /\/src\/pages\/blog\/.+\.md/.exec(node.fileAbsolutePath))
-        .map(({ node }) => (
-          <Link to={'/blog' + node.frontmatter.path} className="fade-link blog-link" key={node.frontmatter.path}>
-            <div className="blog-box">
-              <h2>{node.frontmatter.title}</h2>
-              <h3>{node.frontmatter.date}</h3>
-            </div>
-          </Link>
-        ))}
+      {edges.map(({ node }) => (
+        <Link to={'/blog' + node.frontmatter.path} className="fade-link blog-link" key={node.frontmatter.path}>
+          <div className="blog-box">
+            <h2>{node.frontmatter.title}</h2>
+            <h3>{node.frontmatter.date}</h3>
+          </div>
+        </Link>
+      ))}
     </div>
   </PageLayout>
 );
 
 export default BlogPage;
 
-// TODO: query non-markdown blog posts to add to lsit
+// TODO: query non-markdown blog posts to add to list
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/src/pages/blog/.+md/" } }
+    ) {
       edges {
         node {
-          fileAbsolutePath
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path

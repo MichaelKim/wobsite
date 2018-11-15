@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import PageLayout from '../../components/layouts/page';
 
@@ -32,10 +33,18 @@ class ProjectsPage extends React.Component {
   render() {
     const { selectedTool } = this.state;
     const edges = this.props.data.allMarkdownRemark.edges;
+    const projectImages = this.props.data.allFile.edges;
+
     const projects = edges
-      .filter(({ node }) => /\/src\/pages\/projects\/.+\.md/.exec(node.fileAbsolutePath))
       .map(({ node }) => node.frontmatter)
-      .map(project => Object.assign(project, { slug: slugify(project.title) }));
+      .map(project => {
+        const slug = slugify(project.title);
+        const image = projectImages.find(pi => pi.node.name === slug);
+        return Object.assign(project, {
+          slug,
+          image: image ? image.node.childImageSharp.fixed : null
+        });
+      });
 
     const filteredProjects = projects
       .filter(project => selectedTool === '' || project.tools.split(', ').indexOf(selectedTool) > -1)
@@ -47,9 +56,7 @@ class ProjectsPage extends React.Component {
 
     const tools = projects
       .map(project => project.tools)
-      .reduce((acc, val) => {
-        return acc.concat(val.split(', '));
-      }, [])
+      .reduce((acc, val) => acc.concat(val.split(', ')), [])
       .sort()
       .filter((tool, i, arr) => {
         if (i === 0) return true;
@@ -66,18 +73,30 @@ class ProjectsPage extends React.Component {
               </li>
             ))}
           </ul>
-          <p />
-          {filteredProjects.map(project => (
-            <Link to={'/project/' + project.slug} className="fade-link project-link" key={project.title}>
-              <div className="project" style={{ backgroundImage: 'url(/images/' + project.slug + '.png)' }}>
-                <div className="project-box">
-                  <h2>{project.title}</h2>
-                  <h3>{project.description}</h3>
-                  <h4>Tools: {project.tools}</h4>
+          <div>
+            {filteredProjects.map(project => (
+              <Link to={'/project/' + project.slug} className="fade-link project-link" key={project.title}>
+                <div className="project">
+                  {project.image ? (
+                    <Img
+                      fixed={project.image}
+                      className="project-image"
+                      style={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%'
+                      }}
+                    />
+                  ) : null}
+                  <div className="project-box">
+                    <h2>{project.title}</h2>
+                    <h3>{project.description}</h3>
+                    <h4>Tools: {project.tools}</h4>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </PageLayout>
     );
@@ -88,10 +107,12 @@ export default ProjectsPage;
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/src/pages/projects/.+md/" } }
+    ) {
       edges {
         node {
-          fileAbsolutePath
           frontmatter {
             date(formatString: "YYYY-MM-DD")
             path
@@ -99,6 +120,18 @@ export const pageQuery = graphql`
             link
             description
             tools
+          }
+        }
+      }
+    }
+    allFile(filter: { sourceInstanceName: { eq: "project-images" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(width: 400, height: 225) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
           }
         }
       }
