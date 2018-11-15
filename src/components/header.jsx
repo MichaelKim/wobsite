@@ -33,10 +33,14 @@ const Header = () => (
             Contact
           </Link>
 
-          <a href="https://github.com/LenKagamine" style={{ textDecoration: 'none' }}>
+          <a href="https://github.com/LenKagamine" style={{ textDecoration: 'none' }} aria-label="Link to Github">
             <GithubIcon />
           </a>
-          <a href="https://ca.linkedin.com/in/michaelkim314" style={{ textDecoration: 'none' }}>
+          <a
+            href="https://ca.linkedin.com/in/michaelkim314"
+            style={{ textDecoration: 'none' }}
+            aria-label="Link to LinkedIn"
+          >
             <LinkedinIcon />
           </a>
         </div>
