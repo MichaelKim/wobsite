@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import ProjectLayout from '../components/layouts/project';
 
@@ -15,7 +16,7 @@ export default function projectTemplate(props) {
 }
 
 export const projectQuery = graphql`
-  query ProjectQuery($id: String!) {
+  query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

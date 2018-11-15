@@ -2,20 +2,24 @@
   "name": "wobsite",
   "version": "1.0.0",
   "dependencies": {
-    "baguettebox.js": "^1.10.0",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "baguettebox.js": "^1.11.0",
+    "gatsby": "^2.0.50",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sass": "^2.0.4",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.1.12",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "webpack": "^4.25.1"
   },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "dev": "gatsby develop"
   }
 }

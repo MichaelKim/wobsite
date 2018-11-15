@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 import MenuIcon from './icon-menu';
 import GithubIcon from './icon-github';
@@ -15,9 +15,9 @@ const Header = () => (
       </Link>
 
       <nav className="site-nav">
-        <a className="menu-icon">
+        <div className="menu-icon">
           <MenuIcon />
-        </a>
+        </div>
         <div id="menu">
           <Link to="/about/" className="fade-link">
             About

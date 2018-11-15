@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import PageLayout from '../components/layouts/page';
 
@@ -13,7 +14,7 @@ export default function pageTemplate(props) {
 }
 
 export const pageQuery = graphql`
-  query PageQuery($id: String!) {
+  query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

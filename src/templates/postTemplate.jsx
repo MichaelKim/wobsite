@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import PostLayout from '../components/layouts/post';
 
@@ -14,7 +15,7 @@ export default function postTemplate(props) {
 }
 
 export const postQuery = graphql`
-  query PostQuery($id: String!) {
+  query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

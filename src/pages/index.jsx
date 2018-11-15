@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { connect } from 'react-redux';
 
 import HomeLayout from '../components/layouts/home';
@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
         <div className="box">
           <img
             src="https://avatars1.githubusercontent.com/u/8509052"
-            alt="author photo"
+            alt="Michael Kim"
             className="img-circle"
             width="150"
             height="150"

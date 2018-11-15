@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 
 import PageLayout from '../../components/layouts/page';
 
@@ -62,7 +62,7 @@ class ProjectsPage extends React.Component {
           <ul style={{ marginLeft: 0 }}>
             {tools.map(tool => (
               <li className="tools" onClick={() => this.clickTool(tool)} key={tool}>
-                <a style={{ color: selectedTool === tool ? 'blue' : 'black' }}>{tool}</a>
+                <span style={{ color: selectedTool === tool ? 'blue' : 'black' }}>{tool}</span>
               </li>
             ))}
           </ul>
@@ -87,7 +87,7 @@ class ProjectsPage extends React.Component {
 export default ProjectsPage;
 
 export const pageQuery = graphql`
-  query ProjectsQuery {
+  {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

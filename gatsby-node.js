@@ -8,8 +8,8 @@ const path = require('path');
 
 const { slugify } = require('./src/util');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   const pageTemplate = path.resolve(`src/templates/pageTemplate.jsx`);
   const postTemplate = path.resolve(`src/templates/postTemplate.jsx`);
