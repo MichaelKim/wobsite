@@ -21,6 +21,19 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Michael Kim',
+        short_name: 'Michael Kim',
+        start_url: '/',
+        background_color: '#eaeaea',
+        theme_color: '#eaeaea',
+        display: 'standalone'
+      }
+    },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-catch-links'
   ]
 };
