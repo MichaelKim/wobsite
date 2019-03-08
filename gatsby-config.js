@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'markdown-pages'
+        name: 'markdown-pages',
+        path: `${__dirname}/src/pages`
       }
     },
     {
@@ -30,7 +30,8 @@ module.exports = {
         start_url: '/',
         background_color: '#eaeaea',
         theme_color: '#eaeaea',
-        display: 'standalone'
+        display: 'standalone',
+        icon: `${__dirname}/static/images/favicon.png`
       }
     },
     'gatsby-plugin-offline',
