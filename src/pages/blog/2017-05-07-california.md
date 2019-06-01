@@ -8,9 +8,9 @@ tags: life
 
 California, United States. This will be my new home for the next four months.
 
-Recently, I’ve been faced with a lot of “firsts”. First university. First time living on residence. First job. First flight alone. First time living in the US. Everything happened in such rapid succession, and it’s all flying by so quickly. I feel uneasy at times, finding it difficult to grasp the entirety of my situation, but at the same time I’m also excited, knowing there’s always something new to explore.
+Recently, I’ve been faced with a lot of “firsts”. First time at university. First time living on residence. First job. First flight alone. First time living in the US. Everything happened in such rapid succession, and it’s all flying by so quickly. I feel uneasy at times, finding it difficult to grasp the entirety of my situation, but at the same time I’m also excited, knowing there’s always something new to explore.
 
-The first few days have been the hardest. It takes a while adjusting to a new lifestyle, a new setting, and a new culture. Having to get everything set up took some time and effort to do, but now that the preparation is mostly finished, life should return to what it used to be.
+The first few days have been the hardest. It takes a while adjusting to a new lifestyle, a new setting, and a new culture. Having to get everything set up took some time and effort, but now that the preparation is mostly finished, life should return to what it used to be.
 
 Since last Monday, I started the first work term at none other than Yahoo. At first, I was worried and anxious about working at a company. I had thousands of questions on my mind such as
 
