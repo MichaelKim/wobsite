@@ -2,7 +2,7 @@
 layout: project
 title: MercuryWM
 description: New tab terminal experience
-tools: React, Redux, Node.js, webpack, Chrome
+tools: React, Redux, Node.js, webpack, Chrome, JavaScript
 github: wheel-org/mercurywm
 link: https://chrome.google.com/webstore/detail/mercurywm/hlhabhmnklidddklapmklccngaofgfim
 date: 2017-07-25

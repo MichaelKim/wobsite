@@ -21,7 +21,9 @@ class ProjectLayout extends React.Component {
       <h4>
         Github:{' '}
         {ghRepo ? (
-          <a href={'https://github.com/' + ghUser + '/' + ghRepo}>{ghRepo}</a>
+          <a href={'https://github.com/' + ghUser + '/' + ghRepo}>
+            {ghUser}/{ghRepo}
+          </a>
         ) : (
           <a href={'https://github.com/LenKagamine/' + ghUser}>{ghUser}</a>
         )}
@@ -35,9 +37,13 @@ class ProjectLayout extends React.Component {
     ) : null;
 
     const sliderBox = slider ? (
-      <div className="imagebox">
+      <div className='imagebox'>
         {slider.map((caption, i) => (
-          <a href={'/images/' + slug + '-' + i + '.png'} data-caption={caption} key={slug + '-' + i}>
+          <a
+            href={'/images/' + slug + '-' + i + '.png'}
+            data-caption={caption}
+            key={slug + '-' + i}
+          >
             <img src={'/images/' + slug + '-' + i + '.png'} alt={caption} />
           </a>
         ))}
@@ -46,10 +52,10 @@ class ProjectLayout extends React.Component {
 
     return (
       <DefaultLayout title={title}>
-        <article id="post" className="post">
-          <div id="content" className="post-content">
-            <header className="post-header">
-              <h1 className="post-title">Project: {title}</h1>
+        <article id='post' className='post'>
+          <div id='content' className='post-content'>
+            <header className='post-header'>
+              <h1 className='post-title'>Project: {title}</h1>
               {githubLink}
               {externalLink}
             </header>
