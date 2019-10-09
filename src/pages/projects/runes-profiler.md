@@ -2,12 +2,17 @@
 layout: project
 title: Runes Profiler
 description: League of Legends helper app
-tools: React, Redux, webpack, Node.js, JavaScript
+tools: React, Redux, webpack, Node.js, JavaScript, Firebase
 github: runes-profiler
 link: runes-profiler.michaelkim.me
 date: 2017-12-22
 slider:
-  ['Landing page', 'Runes analysis page of a player', 'Runes analysis of a different rune tree', 'Champion select page']
+  [
+    'Landing page',
+    'Runes analysis page of a player',
+    'Runes analysis of a different rune tree',
+    'Champion select page',
+  ]
 ---
 
 ### About

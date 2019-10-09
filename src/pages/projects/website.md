@@ -1,9 +1,9 @@
 ---
 layout: project
-title: michaelkim.me
+title: michael.kim
 description: Personal portfolio website
-tools: React, Redux, Gatsby, JavaScript, Sass
-link: michaelkim.me
+tools: React, Redux, Gatsby, GraphQL, JavaScript, Sass
+link: michael.kim
 date: 2016-07-03
 ---
 
