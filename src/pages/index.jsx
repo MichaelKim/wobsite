@@ -8,10 +8,12 @@ import HomeLayout from '../components/layouts/home';
 import './index.scss';
 
 const bios = [
-  'Student, Programmer, Gamer',
+  'Student, Developer, Gamer',
   "Yahoo Intern: May - Aug '17",
-  "Facebook Intern: Jan - Apr '18",
-  'Student, Programmer, Gamer'
+  "Facebook Intern: Jan - Apr, Sep - Dec '18",
+  "Wish Intern: May - Aug '19",
+  "Citadel Intern: Jan '20 - Present",
+  'Student, Developer, Gamer'
 ];
 
 class IndexPage extends React.Component {
@@ -34,18 +36,18 @@ class IndexPage extends React.Component {
     const { prev } = this.state;
 
     return (
-      <HomeLayout title="">
-        <div className="box">
+      <HomeLayout title=''>
+        <div className='box'>
           <img
-            src="https://avatars1.githubusercontent.com/u/8509052"
-            alt="Michael Kim"
-            className="img-circle"
-            width="150"
-            height="150"
+            src='https://avatars1.githubusercontent.com/u/8509052'
+            alt='Michael Kim'
+            className='img-circle'
+            width='150'
+            height='150'
           />
           <h1>
-            <span className="no-wrap">Hello, I'm</span>{' '}
-            <span className="no-wrap">
+            <span className='no-wrap'>Hello, I'm</span>{' '}
+            <span className='no-wrap'>
               <b>Michael Kim</b>!
             </span>
           </h1>
@@ -58,25 +60,25 @@ class IndexPage extends React.Component {
             {bios[prev]}
           </h3>
 
-          <hr className="hline" />
+          <hr className='hline' />
 
-          <Link to="/about/" className="btn">
+          <Link to='/about/' className='btn'>
             about
           </Link>
-          <Link to="/projects/" className="btn">
+          <Link to='/projects/' className='btn'>
             projects
           </Link>
-          <Link to="/blog/" className="btn">
+          <Link to='/blog/' className='btn'>
             blog
           </Link>
-          <a href="https://github.com/LenKagamine/" className="btn">
+          <a href='https://github.com/LenKagamine/' className='btn'>
             github
           </a>
-          <a href="/Michael-Kim-Resume.pdf" className="btn">
+          <a href='/Michael-Kim-Resume.pdf' className='btn'>
             resume
           </a>
 
-          <hr className="hline" />
+          <hr className='hline' />
         </div>
       </HomeLayout>
     );

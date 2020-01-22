@@ -47,7 +47,12 @@ class ProjectsPage extends React.Component {
       });
 
     const filteredProjects = projects
-      .filter(project => selectedTool === '' || project.tools.split(', ').indexOf(selectedTool) > -1)
+      .filter(
+        project =>
+          selectedTool === '' ||
+          project.tools.split(', ').indexOf(selectedTool) > -1 ||
+          (project.more && project.more.split(', ').indexOf(selectedTool) > -1)
+      )
       .sort((a, b) => {
         if (a.date < b.date) return 1;
         if (a.date > b.date) return -1;
@@ -55,32 +60,47 @@ class ProjectsPage extends React.Component {
       });
 
     const tools = projects
-      .map(project => project.tools)
+      .map(project => {
+        if (project.more) return project.tools + ', ' + project.more;
+        return project.tools;
+      })
       .reduce((acc, val) => acc.concat(val.split(', ')), [])
-      .sort()
+      .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
       .filter((tool, i, arr) => {
         if (i === 0) return true;
         return arr[i - 1] !== tool;
       });
 
     return (
-      <PageLayout title="Projects">
-        <div className="project-list">
+      <PageLayout title='Projects'>
+        <div className='project-list'>
           <ul style={{ marginLeft: 0 }}>
             {tools.map(tool => (
-              <li className="tools" onClick={() => this.clickTool(tool)} key={tool}>
-                <span style={{ color: selectedTool === tool ? 'blue' : 'black' }}>{tool}</span>
+              <li
+                className='tools'
+                onClick={() => this.clickTool(tool)}
+                key={tool}
+              >
+                <span
+                  style={{ color: selectedTool === tool ? 'blue' : 'black' }}
+                >
+                  {tool}
+                </span>
               </li>
             ))}
           </ul>
           <div>
             {filteredProjects.map(project => (
-              <Link to={'/project/' + project.slug} className="fade-link project-link" key={project.title}>
-                <div className="project">
+              <Link
+                to={'/project/' + project.slug}
+                className='fade-link project-link'
+                key={project.title}
+              >
+                <div className='project'>
                   {project.image ? (
                     <Img
                       fixed={project.image}
-                      className="project-image"
+                      className='project-image'
                       style={{
                         position: 'absolute',
                         width: '100%',
@@ -88,7 +108,7 @@ class ProjectsPage extends React.Component {
                       }}
                     />
                   ) : null}
-                  <div className="project-box">
+                  <div className='project-box'>
                     <h2>{project.title}</h2>
                     <h3>{project.description}</h3>
                     <h4>Tools: {project.tools}</h4>
@@ -120,6 +140,7 @@ export const pageQuery = graphql`
             link
             description
             tools
+            more
           }
         }
       }

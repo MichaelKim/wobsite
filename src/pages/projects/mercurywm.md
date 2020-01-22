@@ -2,11 +2,16 @@
 layout: project
 title: MercuryWM
 description: New tab terminal experience
-tools: React, Redux, Node.js, webpack, Chrome, JavaScript
+tools: React, Redux, webpack, Chrome
+more: JavaScript, Flow
 github: wheel-org/mercurywm
 link: https://chrome.google.com/webstore/detail/mercurywm/hlhabhmnklidddklapmklccngaofgfim
 date: 2017-07-25
-slider: ['Layout with clock, weather, and todo scripts', 'Complex window layout with image script']
+slider:
+  [
+    'Layout with clock, weather, and todo scripts',
+    'Complex window layout with image script',
+  ]
 ---
 
 ### About

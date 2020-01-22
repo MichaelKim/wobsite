@@ -2,7 +2,8 @@
 layout: project
 title: hestia.io
 description: Node framework for making web apps
-tools: Node.js, Socket.io, JavaScript, Flow, Jest
+tools: Node.js, Socket.io, Flow, Jest
+more: JavaScript
 github: Hestia
 link: https://www.npmjs.com/package/hestia.io
 date: 2017-02-05

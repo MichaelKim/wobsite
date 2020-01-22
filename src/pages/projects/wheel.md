@@ -2,7 +2,8 @@
 layout: project
 title: Wheel
 description: Expenses tracking app
-tools: Node.js, JavaScript, Firebase, Android
+tools: Node.js, Android, Firebase
+more: JavaScript
 github: wheel-org/wheel-backend
 link: play.google.com/store/apps/details?id=org.wheel.expenses
 date: 2017-07-03

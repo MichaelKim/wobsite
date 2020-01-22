@@ -2,7 +2,7 @@ import { createStore as reduxCreateStore } from 'redux';
 
 const reducer = (state, action) => {
   if (action.type === `PULL_CHAIN`) {
-    const newChain = (state.chain + 1) % 4;
+    const newChain = (state.chain + 1) % 6;
 
     if (newChain === 0) document.body.className = '';
     else document.body.className = 'dark';

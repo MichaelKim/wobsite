@@ -3,6 +3,7 @@ layout: project
 title: RealPacman
 description: Slightly realistic Pacman
 tools: Java
+more: Game
 github: RealPacman
 date: 2015-02-26
 ---

@@ -2,10 +2,16 @@
 layout: project
 title: lasopmorp
 description: Short web game
-tools: TypeScript, JavaScript
+tools: TypeScript
+more: JavaScript, Game
 github: lasopmorp
 date: 2016-05-18
-slider: ['First letter', Rewinding after all letters are finished", 'Replaying after rewinding']
+slider:
+  [
+    'First letter',
+    Rewinding after all letters are finished",
+    'Replaying after rewinding',
+  ]
 ---
 
 ### About

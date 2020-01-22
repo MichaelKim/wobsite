@@ -3,6 +3,7 @@ layout: project
 title: aMEba
 description: Interactive life simulation game
 tools: Java
+more: Game
 github: aMEba
 date: 2015-01-22
 slider: ['Survival gameplay', 'God Mode gameplay', 'Start menu']

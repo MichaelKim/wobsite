@@ -8,6 +8,8 @@ const colors = [
   'rgba(0, 0, 0, 0)',
   'rgba(79, 0, 99, 0.7)', // purple
   'rgba(8, 56, 161, 0.7)', // blue
+  'rgba(47, 183, 236, 0.7)', // light blue
+  'rgba(0, 61, 125, 0.7)', // dark blue
   'rgba(0, 0, 0, 0.7)' // dark
 ];
 
@@ -16,8 +18,8 @@ const Background = ({ chain }) => {
 
   return (
     <div>
-      <div id="full-page" />
-      <div id="full-page-color" style={{ backgroundColor: bgColor }} />
+      <div id='full-page' />
+      <div id='full-page-color' style={{ backgroundColor: bgColor }} />
     </div>
   );
 };

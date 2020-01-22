@@ -2,7 +2,8 @@
 layout: project
 title: TriggerBot
 description: Communicating bot with an attitude
-tools: Node.js, Voice Recognition, Sentiment Analysis, JavaScript
+tools: Node.js, Voice Recognition, Sentiment Analysis
+more: JavaScript
 github: yanske1/TriggerBot
 link: triggerbot.herokuapp.com
 date: 2017-01-28

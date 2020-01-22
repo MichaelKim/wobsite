@@ -2,7 +2,7 @@
 layout: project
 title: 15 Puzzle
 description: Generalized 15-puzzle solver
-tools: C++, WebAssembly
+tools: C++, WebAssembly, JavaScript
 github: 15puzzle
 link: puzzle.michaelkim.me
 date: 2018-11-15
