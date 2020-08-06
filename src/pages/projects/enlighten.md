@@ -5,9 +5,9 @@ description: Collaborative multiplayer webgame
 tools: Node.js, Socket.io, JavaScript
 more: Game
 github: Enlighten
-link: enlighten.michaelkim.me
+link: enlighten.michael.kim
 date: 2015-08-30
-slider: ['First level', 'Gameplay with two players']
+slider: ["First level", "Gameplay with two players"]
 ---
 
 ### About
