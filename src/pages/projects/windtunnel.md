@@ -2,10 +2,10 @@
 layout: project
 title: 1315-MH Wind Tunnel
 description: Fully-functioning wind tunnel and analyzer
-tools: Java, Arduino, C++, Matlab, LaTeX
+tools: Java, Arduino, C++
 github: AP-Physics
 date: 2015-09-26
-slider: ["Initial assembly of parts"]
+slider: ['Initial assembly of parts']
 ---
 
 ### About

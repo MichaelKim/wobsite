@@ -2,7 +2,7 @@
 layout: project
 title: Neutrino
 description: Lightweight Electron clone
-tools: C++, Objective-C, Duktape
+tools: C++, Duktape
 more: JavaScript
 github: neutrino
 date: 2019-07-08

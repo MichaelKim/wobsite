@@ -3,7 +3,7 @@ layout: project
 title: Lyra
 description: Cross-platform music playing app
 tools: Electron, React Native, TypeScript, Flow, Firebase
-more: JavaScript, Sass, webpack, Android, iOS, Node.js, React, Redux
+more: JavaScript, Sass, webpack, Android, Node.js, React, Redux
 github: lyra
 date: 2019-03-27
 ---
