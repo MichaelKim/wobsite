@@ -25,7 +25,7 @@ class ProjectLayout extends React.Component {
             {ghUser}/{ghRepo}
           </a>
         ) : (
-          <a href={'https://github.com/LenKagamine/' + ghUser}>{ghUser}</a>
+          <a href={'https://github.com/MichaelKim/' + ghUser}>{ghUser}</a>
         )}
       </h4>
     ) : null;

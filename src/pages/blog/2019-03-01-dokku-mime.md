@@ -6,7 +6,7 @@ path: /mime
 tags: code
 ---
 
-I use [Dokku](https://github.com/dokku/dokku) to manage the various projects hosted on my domain, such as this website. It's worked pretty well so far, but I've had one issue while getting my [15 Puzzle solver](https://github.com/LenKagamine/15puzzle.js) hosted.
+I use [Dokku](https://github.com/dokku/dokku) to manage the various projects hosted on my domain, such as this website. It's worked pretty well so far, but I've had one issue while getting my [15 Puzzle solver](https://github.com/MichaelKim/15puzzle.js) hosted.
 
 To host a static page using Dokku, Dokku has an [official buildpack](https://github.com/dokku/buildpack-nginx). To trigger it, it's as simple as creating an empty `.static` file in the root directory. However, if you happen to also host WebAssembly (`.wasm`) files, you may have encountered an invalid MIME type error:
 

@@ -33,7 +33,7 @@ const Header = () => (
             Contact
           </Link>
 
-          <a href="https://github.com/LenKagamine" style={{ textDecoration: 'none' }} aria-label="Link to Github">
+          <a href="https://github.com/MichaelKim" style={{ textDecoration: 'none' }} aria-label="Link to Github">
             <GithubIcon />
           </a>
           <a

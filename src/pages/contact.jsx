@@ -15,9 +15,9 @@ const ContactPage = () => (
       </p>
       <p>
         <b>Github: </b>
-        <a href="https://github.com/LenKagamine">
+        <a href="https://github.com/MichaelKim">
           <GithubIcon />
-          <span className="username"> LenKagamine</span>
+          <span className="username"> MichaelKim</span>
         </a>
       </p>
       <p>

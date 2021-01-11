@@ -71,7 +71,7 @@ class IndexPage extends React.Component {
           <Link to='/blog/' className='btn'>
             blog
           </Link>
-          <a href='https://github.com/LenKagamine/' className='btn'>
+          <a href='https://github.com/MichaelKim/' className='btn'>
             github
           </a>
           <a href='/Michael-Kim-Resume.pdf' className='btn'>

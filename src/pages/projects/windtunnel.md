@@ -24,4 +24,4 @@ Each module was individually tested, such as the anemometer, the seven segment d
 
 This project required months of planning and designing, which was all packaged into a prospectus prior to construction. The prospectus outlined the design of each section of the tunnel, all the electronic components such as the DC motor and the force sensors, and the software components. It also included 3D models of the necessary parts for the frame, and explained the theory of the airflow and the airfoils.
 
-The [final Java GUI](https://github.com/LenKagamine/AP-Physics/tree/master/Summative) (source + executable), along with the Arduino protocol and testing code, are all available in the repo. The prospectus is available upon request.
+The [final Java GUI](https://github.com/MichaelKim/AP-Physics/tree/master/Summative) (source + executable), along with the Arduino protocol and testing code, are all available in the repo. The prospectus is available upon request.

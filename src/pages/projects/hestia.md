@@ -19,7 +19,7 @@ Hestia.io has gone under a lot of changes since its creation at QHacks 2017. Sin
 
 ### Development
 
-The concept for Hestia began as a web app that hosted multi-user real-time apps created by other developers. As rooms didn't exist natively in Socket.io, Hestia managed rooms, their group of users, and their app instances. In order to sandbox app instances from Hestia and other apps, I used Shadow DOM to run these instances. While it wasn't the best of solutions, it did its job well enough to be presented as a demo. You can check out my sleep deprived code in all its glory [here](https://github.com/LenKagamine/Hestia/tree/3b2357e55e41050657606784ff83c88260f7f3d9).
+The concept for Hestia began as a web app that hosted multi-user real-time apps created by other developers. As rooms didn't exist natively in Socket.io, Hestia managed rooms, their group of users, and their app instances. In order to sandbox app instances from Hestia and other apps, I used Shadow DOM to run these instances. While it wasn't the best of solutions, it did its job well enough to be presented as a demo. You can check out my sleep deprived code in all its glory [here](https://github.com/MichaelKim/Hestia/tree/3b2357e55e41050657606784ff83c88260f7f3d9).
 
 Months after the hackathon, I revisited Hestia and made a few changes. The most significant change was the way how Hestia ran its app instances. I moved all of the app logic to a separate server and had Hestia run apps by rendering an iframe pointed to the new app server. In hindsight, I'm not sure why I came to this decision and shortly after, I combined the two servers, keeping the iframes.
 

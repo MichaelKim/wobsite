@@ -16,13 +16,13 @@ In addition, the course included units in celestial mechanics, space science, an
 
 There were five labs to complete and a final summative project, all of which required extensive learning beyond what was taught in class. Due to their complexity, AP Physics took up two periods (~3 hours): one solely dedicated for lectures, and another for lab work. Despite this, we were often staying after school to squeeze in another hour or two to work. We were given slightly less than a month to complete each lab, which included data collection, analysis, and the formal lab report.
 
-I have a [repo on Github](https://github.com/LenKagamine/AP-Physics/) which contains several Matlab scripts that were used for analyzing and graphing data, and two C++ simulations. Our lab group also decided to use LaTeX rather than MS Word to format lab reports. A [default lab template](https://github.com/LenKagamine/AP-Physics/blob/master/Lab%20Report%20Template.tex) is available in the repo along with an example of a lab report (some parts redacted to hide from younger years).
+I have a [repo on Github](https://github.com/MichaelKim/AP-Physics/) which contains several Matlab scripts that were used for analyzing and graphing data, and two C++ simulations. Our lab group also decided to use LaTeX rather than MS Word to format lab reports. A [default lab template](https://github.com/MichaelKim/AP-Physics/blob/master/Lab%20Report%20Template.tex) is available in the repo along with an example of a lab report (some parts redacted to hide from younger years).
 
 ### Summative
 
 The final project was a fitting finish to such a crazy course: we built a [fully functioning wind tunnel](/project/1315-mh-wind-tunnel), equipped with sensors and digital displays that could accurately measure and output the lift and drag forces on an airfoil. The wind tunnel was connected to a computer and controlled using a Java GUI. It required months of planning and designing, which was all packaged into a prospectus prior to construction. The prospectus outlined the design of each section of the tunnel, all the electronic components such as the DC motor and the force sensors, and the software components. It also included 3D models of the necessary parts for the frame, and explained the theory of the wind flow and the airfoils.
 
-The [final Java GUI](https://github.com/LenKagamine/AP-Physics/tree/master/Summative) (source + compiled binary), along with the Arduino protocol and testing code, are available in the same repo.
+The [final Java GUI](https://github.com/MichaelKim/AP-Physics/tree/master/Summative) (source + compiled binary), along with the Arduino protocol and testing code, are available in the same repo.
 
 Overall, the course was more than just learning physics; the complete change in style and workload was something that I would inevitably experience in university, and I believe being able to get a taste of it during the comfort of high school will definitely prepare me for the future. For more information about the course, visit [my teacher's website](http://www.hmvb.org/).
 

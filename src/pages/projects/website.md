@@ -19,4 +19,4 @@ I've spent a long time making it responsive and mobile-friendly. It also feature
 
 ### Development
 
-Originally, this website was built using Jekyll and was hosted with Github pages (which has built-in integration with Jekyll sites). The source code for the old website is available at [/lenkagamine.github.io](https://github.com/LenKagamine/lenkagamine.github.io). I've since rewrote it in Gatsby, and I wrote a blog post about the port [here](/blog/gatsby).
+Originally, this website was built using Jekyll and was hosted with Github pages (which has built-in integration with Jekyll sites). The source code for the old website is available at [/michaelkim.github.io](https://github.com/MichaelKim/michaelkim.github.io). I've since rewrote it in Gatsby, and I wrote a blog post about the port [here](/blog/gatsby).
