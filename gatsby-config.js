@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Michael Kim'
+    title: 'Michael Kim',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -9,15 +9,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'markdown-pages',
-        path: `${__dirname}/src/pages`
-      }
+        path: `${__dirname}/src/pages`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'project-images',
-        path: `${__dirname}/src/project-images/`
-      }
+        path: `${__dirname}/src/project-images/`,
+      },
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
@@ -31,10 +31,10 @@ module.exports = {
         background_color: '#eaeaea',
         theme_color: '#eaeaea',
         display: 'standalone',
-        icon: `${__dirname}/static/images/favicon.png`
-      }
+        icon: `${__dirname}/static/images/favicon.svg`,
+      },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links'
-  ]
+    'gatsby-plugin-catch-links',
+  ],
 };

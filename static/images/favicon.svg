@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+    <circle cx="48" cy="348" r="28"/>
+    <path d="
+M 212 376 L 228 376 L 312 240 L 312 376 L 348 376 L 348 300 L 380 264 L 456 376 L 504 376 L 404 232 L 484 124 L 440 124 L 348 248 L 348 124 L 328 124 L 236 296 L 220 160 L 188 216
+    " stroke="#555cff" fill="#555cff"/>
+    <path d="
+    M 192 124
+    L 216 124
+    L 220.2 160
+    L 128 376
+    h -36
+    " stroke-width="1"/>
+  </svg>
